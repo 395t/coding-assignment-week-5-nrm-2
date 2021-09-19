@@ -1,16 +1,60 @@
-# coding-template
+# Normalization Methods - Week 5 Group 2
 
-## Summary
+Our group covered the following normalization methods and papers,
+* **Group Normalization** - [Group Normalization](https://arxiv.org/abs/1803.08494), Wu, He, 2018
+* **No Normalization with Gradient Clipping** - [High-Performance Large-Scale Image Recognition Without Normalization](https://arxiv.org/abs/2102.06171), Brock, De, Smith, Simonyan; 2021
+* **Batch-Channel Normalization** - [Micro-Batch Training with Batch-Channel Normalization and Weight Standardization](https://arxiv.org/abs/1903.10520), Qiao, Wang, Liu, Shen, Yuille; 2019
+* **Batch Normalization** - [Understanding Batch Normalization](https://arxiv.org/abs/1806.02375), Bjorck, Gomes, Selman, Weinberger; 2018
+* **Batch Normalization** - [Rethinking "Batch" in BatchNorm](https://arxiv.org/abs/2105.07576), Wu, Johnson; 2021
 
-The summary can contain but is not limited to:
 
-- Code structure.
+We used the following image classification datasets to test the effectiveness of these normalizations methods.
+## Datasets
+* CIFAR10
+* STL10
+* Caltech100
 
-- Commands to reproduce your experiments.
 
-- Write-up of your findings and conclusions.
+We tested the following normalization methods on the [VGG11](https://arxiv.org/abs/1409.1556) model architecture.
 
-- Ipython notebooks can be organized in `notebooks`.
+## Normalization Types
+* **Group Normalization**: `torch.nn.GroupNorm(in,out)`
+* **Gradient Clipping**: `torch.nn.utils.clip_grad_norm_()`
+* **Batch Channel Weight Normalization** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Reference
 
