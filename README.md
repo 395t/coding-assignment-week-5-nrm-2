@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Normalization Methods - Week 5 Group 2
 
 Our group covered the following normalization methods and papers,
@@ -22,98 +23,79 @@ We tested the following normalization methods on the [VGG11](https://arxiv.org/a
 * **Gradient Clipping**: `torch.nn.utils.clip_grad_norm_()`
 * **Batch Channel Weight Normalization** 
 
+=======
+## CIFAR-10 Task – Object Recognition in Images
+
+### Description
+
+<font size=3>The CIFAR-10 is a computer vision data consists of 60,000 (32×32) color images in 10 classes, with 6000 images per class.</font>
+
+<b><font size=5>Task and Model </font></b>
+
+<font size=3> The purpose of this dataset and task is to demonstrate the effects of the Batch Normalization on VGG architecture for reducing the loss over the set of epochs and improving the accuracy.  The dataset loading and batch normalization is performed using Keras and tensor flow liberaries.Initially, an extremely simple model was used which yielded accuracies between 70-75. However, as these results were found unsatisfactory, we decided to use a model inspired by vgg16. The model was initially tested for 5 epochs with a batch size of 10. The numbers of epochs were increased to 150 and batch size to 128 to compare the loss and accuracy.</font>
+
+### Method
+
+### Results
+
+#### Loss
+
+<img src="figure/Training loss across all models for CIFAR10.png">
+
+<img src="figure/Validation loss across all models for CIFAR10.png">
+
+#### Accuracy
+
+<img src="figure/Validation accuracy across all models for CIFAR10.png">
+
+<img src="figure/Training accuracy across all models for CIFAR10.png">
 
 
+## STL10
 
+### Description
 
+### method
 
+### Result
 
+#### Loss
 
+<img src="figure/Training loss across all models for STL10.png">
 
+<img src="figure/Validation loss across all models for STL10.png">
 
+#### Accuracy
 
+<img src="figure/Validation accuracy across all models for STL10.png">
 
+<img src="figure/Training accuracy across all models for STL10.png">
 
+## Caltech256
 
+### Description
 
+Caltech 256 is a much richer dataset that splits around 30k real world image to 257 groups. Each class is guranteed to have at least 80 image.
 
+### method
 
+Like previous dataset, we trained VGG11 for 10 epoch with adam optimizer with initial *lr = 1e-4*, and a batch size of 128 image. For every 10 batch, a valdation set of roughly 500 image is randomly picked and evaluted. 
 
+### Result
 
+We reported on the training/evaluation loss and their accuracy below:
 
+#### Loss
 
+<img src="figure/Training loss across all models for CALTECH256.png">
 
+<img src="figure/Validation loss across all models for CALTECH256.png">
 
+#### Accuracy
 
+<img src="figure/Validation accuracy across all models for CALTECH256.png">
 
+<img src="figure/Training accuracy across all models for CALTECH256.png">
 
-
-
-
-
-
-
-
-
-
-## Reference
-
-Any code that you borrow or other reference should be properly cited.
-
-
-CIFAR-10 Task – Object Recognition in Images
-The CIFAR-10 is a computer vision data consists of 60,000 (32×32) color images in 10 classes, with 6000 images per class.
-Task and Model
-The purpose of this dataset and task is to demonstrate the effects of the Batch Normalization on VGG architecture for reducing the loss over the set of epochs and improving the accuracy.  The dataset loading and batch normalization is performed using Keras and tensor flow liberaries.Initially, an extremely simple model was used which yielded accuracies between 70-75. However, as these results were found unsatisfactory, we decided to use a model inspired by vgg16 [2]. The model was initially tested for 5 epochs with a batch size of 10. The numbers of epochs were increased to 150 and batch size to 128 to compare the loss and accuracy.
-Results
-Starting epoch 1
-Loss after mini-batch   500: 2.127
-Loss after mini-batch  1000: 2.017
-Loss after mini-batch  1500: 1.949
-Loss after mini-batch  2000: 1.908
-Loss after mini-batch  2500: 1.882
-Loss after mini-batch  3000: 1.866
-Loss after mini-batch  3500: 1.847
-Loss after mini-batch  4000: 1.818
-Loss after mini-batch  4500: 1.806
-Loss after mini-batch  5000: 1.787
-Starting epoch 2
-Loss after mini-batch   500: 1.762
-Loss after mini-batch  1000: 1.737
-Loss after mini-batch  1500: 1.737
-Loss after mini-batch  2000: 1.712
-Loss after mini-batch  2500: 1.718
-Loss after mini-batch  3000: 1.724
-Loss after mini-batch  3500: 1.703
-Loss after mini-batch  4000: 1.685
-Loss after mini-batch  4500: 1.699
-Loss after mini-batch  5000: 1.688
-
-Decrease in loss gradually when batch normalization is applied.
-
-
-
-Starting epoch 1
-Loss after mini-batch   500: 2.146
-Loss after mini-batch  1000: 2.050
-Loss after mini-batch  1500: 1.979
-Loss after mini-batch  2000: 1.934
-Loss after mini-batch  2500: 1.906
-Loss after mini-batch  3000: 1.905
-Loss after mini-batch  3500: 1.883
-Loss after mini-batch  4000: 1.852
-Loss after mini-batch  4500: 1.845
-Loss after mini-batch  5000: 1.830
-Starting epoch 2
-Loss after mini-batch   500: 1.809
-Loss after mini-batch  1000: 1.787
-Loss after mini-batch  1500: 1.789
-Loss after mini-batch  2000: 1.776
-Loss after mini-batch  2500: 1.767
-Loss after mini-batch  3000: 1.774
-Loss after mini-batch  3500: 1.756
-Loss after mini-batch  4000: 1.743
-Loss after mini-batch  4500: 1.757
-Loss after mini-batch  5000: 1.742
-
-Decrease in loss without batch normalization.
+As expected, batch norm performs the best across all cases. 
+>>>>>>> 19c49046f861835dbbdd47e7a942942f6a633016
