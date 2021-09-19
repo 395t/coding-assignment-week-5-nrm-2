@@ -49,9 +49,15 @@
 
 ### Description
 
+Caltech 256 is a much richer dataset that splits around 30k real world image to 257 groups. Each class is guranteed to have at least 80 image.
+
 ### method
 
+Like previous dataset, we trained VGG11 for 10 epoch with adam optimizer with initial *lr = 1e-4*, and a batch size of 128 image. For every 10 batch, a valdation set of roughly 500 image is randomly picked and evaluted. 
+
 ### Result
+
+We reported on the training/evaluation loss and their accuracy below:
 
 #### Loss
 
@@ -65,7 +71,4 @@
 
 <img src="figure/Training accuracy across all models for CALTECH256.png">
 
-
-```python
-
-```
+As expected, batch norm performs the best across all cases. 
