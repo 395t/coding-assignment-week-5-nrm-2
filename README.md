@@ -20,7 +20,7 @@ We tested the following normalization methods on the [VGG11](https://arxiv.org/a
 ## Normalization Types
 * **Group Normalization**: `torch.nn.GroupNorm(in,out)`
 * **Gradient Clipping**: `torch.nn.utils.clip_grad_norm_()`
-* **Batch Channel Weight Normalization** [BCN Author's GitHub](https://github.com/joe-siyuan-qiao/Batch-Channel-Normalization) [WS Author's GitHub](https://github.com/joe-siyuan-qiao/WeightStandardization)
+* **Batch Channel Weight Normalization** [BCN Author's GitHub](https://github.com/joe-siyuan-qiao/Batch-Channel-Normalization) / [WS Author's GitHub](https://github.com/joe-siyuan-qiao/WeightStandardization)
 * **Batch Normalization** `torch.nn.BatchNorm2d()`
 
 =======
