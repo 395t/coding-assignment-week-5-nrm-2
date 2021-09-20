@@ -20,7 +20,7 @@ We tested the following normalization methods on the [VGG11](https://arxiv.org/a
 ## Normalization Types
 * **Group Normalization**: `torch.nn.GroupNorm(in,out)`
 * **Gradient Clipping**: `torch.nn.utils.clip_grad_norm_()`
-* **Batch Channel Weight Normalization** 
+* **Batch Channel Weight Normalization** [BCN Author's GitHub](https://github.com/joe-siyuan-qiao/Batch-Channel-Normalization) [WS Author's GitHub](https://github.com/joe-siyuan-qiao/WeightStandardization)
 * **Batch Normalization** `torch.nn.BatchNorm2d()`
 
 =======
@@ -91,7 +91,7 @@ Using vgg16 with the Adam optimizer over 10 epochs, a smaller (32) and larger (5
 
 <img src="figure/stl10 different batch sizes (test loss).png">
 
-As seen from the results above, the smaller batch size was able to generalize the training set better and provide better test results. The low training loss of BCN+WS with a batch size of 512 suggests that it was overfitting the data. This is especially critical with STL10 since the training set is so small. 
+As seen from the results above, the smaller batch size was able to generalize the training set better and provide lower loss in the test results. The low training loss of BCN+WS with a batch size of 512 suggests that it was overfitting the data. This is especially critical with STL10 since the training set is so small. 
 
 ## Caltech256
 
