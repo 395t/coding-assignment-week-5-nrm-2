@@ -59,11 +59,11 @@ In terms of accuracy, batch normalization surpasses all other normalizations on 
 
 ### Description
 
-STL10 consists of 96x96 labeled images used for Image Classification training.  It contains 1300 images per each of its 10 classes.
+The STL10 dataset consists of 96x96 labeled images used for Image Classification. It provides a similar challenge as CIFAR-10, but with a smaller training set. The training set contained 5000 images while there are 8000 images in the test set. We also ignored the unlabeled training set provided for unsupervised training purposes. This dataset was a good test to see how well the different normalization techniques can generalize with a smaller training sample size. 
 
 ### method
 
-Like the previous dataset, we trained VGG11 for 10 epoch with adam optimizer with initial *lr = 1e-4*, and a batch size of 128 image.
+Like the previous dataset, we trained VGG11 for 10 epochs with adam optimizer with initial *lr = 1e-4*, and a batch size of 128 image.
 
 ### Result
 
@@ -82,6 +82,16 @@ We see a similar story to the loss curves when we look at the accuracy results. 
 <img src="figure/Validation accuracy across all models for STL10.png">
 
 <img src="figure/Training accuracy across all models for STL10.png">
+
+#### Batch Size analysis with STL10
+
+Using vgg16 with the Adam optimizer over 10 epochs, a smaller (32) and larger (512) batch size were tested with batch channel normalization with weight standardization and batch normalization. 
+
+<img src="figure/stl10 different batch sizes (training loss).png">
+
+<img src="figure/stl10 different batch sizes (test loss).png">
+
+As seen from the results above, the smaller batch size was able to generalize the training set better and provide better test results. The low training loss of BCN+WS with a batch size of 512 suggests that it was overfitting the data. This is especially critical with STL10 since the training set is so small. 
 
 ## Caltech256
 
